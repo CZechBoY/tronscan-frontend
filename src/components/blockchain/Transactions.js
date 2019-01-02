@@ -176,9 +176,16 @@ class Transactions extends React.Component {
           <div className="row">
             <div className="col-md-12 table_pos">
               {total ? <div className="table_pos_info d-none d-md-block" style={{left: 'auto'}}>{tableInfo}</div> : ''}
-              <div className="apply-trc20" style={{width:"300px"}}>
+              <div className="apply-trc20" style={{width:"350px"}}>
                 <RangePicker
-                    ranges={{ Today: [moment(), moment()], 'This Month': [moment().startOf('month'), moment().endOf('month')] }}
+                    ranges={{ Today: [moment().startOf('day'), moment()],
+                        'Yesterday': [moment().add(-1, 'days'), moment().startOf('day')],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+
+                    }}
+
+                    showTime
+                    format="YYYY/MM/DD HH:mm:ss"
                     onChange={this.onChangeDate}
                 />
               </div>
