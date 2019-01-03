@@ -1270,7 +1270,7 @@ class Account extends Component {
                       <tr>
                         <th style={{width: 150}}>{tu("name")}:</th>
                         <td>
-                          <TokenLink name={issuedAsset.name} address={issuedAsset.ownerAddress}/>
+                          <TokenLink name={issuedAsset.name} address={issuedAsset.ownerAddress} namePlus={issuedAsset.name + ' (' + issuedAsset.abbr + ')'}/>
                         </td>
                       </tr>
                       <tr>
@@ -1287,10 +1287,11 @@ class Account extends Component {
                       </tr>
                       <tr>
                         <th>{tu("progress")}:</th>
-                        <td>
-                          <div className="progress mt-1">
-                            <div className="progress-bar bg-success" style={{width: issuedAsset.percentage + '%'}}/>
+                        <td className="d-flex">
+                          <div className="progress mt-1" style={{width:'95%'}}>
+                            <div className="progress-bar bg-success" style={{width: issuedAsset.issuedPercentage + '%'}}/>
                           </div>
+                            <div className="ml-2">{issuedAsset.issuedPercentage.toFixed(3) +'%'}</div>
                         </td>
                       </tr>
                       {
