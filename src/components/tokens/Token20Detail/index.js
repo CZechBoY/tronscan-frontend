@@ -196,7 +196,7 @@ class Token20Detail extends React.Component {
               <div className="token-sweet-alert">
                 <a className="close" onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <span>{tu('login_first')}</span>
                 <button className="btn btn-danger btn-block mt-3" onClick={() => {
                   this.setState({alert: null})
@@ -218,7 +218,7 @@ class Token20Detail extends React.Component {
               <div className="mt-5 token-sweet-alert" style={{textAlign: 'left'}}>
                 <a style={{float: 'right', marginTop: '-45px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <h5 style={{color: 'black'}}>{tu('buy_token_info')}</h5>
                 {token.remaining === 0 && <span> {tu('no_token_to_buy')}</span>}
                 <div className="input-group mt-5">
@@ -265,7 +265,7 @@ class Token20Detail extends React.Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <span>
                   {tu("not_enough_trx_message")}
                 </span>
@@ -287,7 +287,7 @@ class Token20Detail extends React.Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <h5 style={{color: 'black'}}>{tu("buy_confirm_message_1")}</h5>
                 <span>
                 {buyAmount} {token.name} {t("for")} {buyAmount * (token.price / ONE_TRX)} TRX?
@@ -331,7 +331,7 @@ class Token20Detail extends React.Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <h5 style={{color: 'black'}}>{tu('transaction')} {tu('confirm')}</h5>
                 <span>
                 {tu('success_receive')} {token.name} {tu('tokens')}

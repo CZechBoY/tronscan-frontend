@@ -132,6 +132,7 @@ class TokenList extends Component {
     if (value > max) {
       value = max;
     }
+    console.log(value)
     this.setState({buyAmount: value});
     this.buyAmount.value = value;
     let priceTRX = value * (price / ONE_TRX);
@@ -223,7 +224,7 @@ class TokenList extends Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <span>
                   {tu("not_enough_trx_message")}
                 </span>
@@ -245,7 +246,7 @@ class TokenList extends Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <h5 style={{color: 'black'}}>{tu("buy_confirm_message_1")}</h5>
                 <span>
                 {buyAmount} {token.name} {t("for")} {buyAmount * (token.price / ONE_TRX)} TRX?
@@ -324,7 +325,7 @@ class TokenList extends Component {
               <div className="mt-5 token-sweet-alert">
                 <a style={{float: 'right', marginTop: '-155px'}} onClick={() => {
                   this.setState({alert: null})
-                }}><i className="fa fa-times" ariaHidden="true"></i></a>
+                }}><i className="fa fa-times" ></i></a>
                 <h5 style={{color: 'black'}}>{tu('transaction')} {tu('confirm')}</h5>
                 <span>
                {tu('success_receive')} {token.name} {tu('tokens')}
